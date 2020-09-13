@@ -1,0 +1,24 @@
+boldR{
+    color:red;
+    font-weight: bolder;
+}
+HL_Y{
+    background-color: yellow;
+}
+HL_CFBlue{
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+HL_HPink{
+    background-color: hotpink;
+    color:cornsilk;
+}
+
+.images{
+    box-sizing: border-box;
+    width: 400px;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 400ms ease-out;
+}

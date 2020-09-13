@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>uHost</title>
+        <link rel="shorcut icon" href="favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="main.css">
+<body>
+    <h1>Cloud Hosting</h1>
+    <p>Multiple physical machines that act as one system. The system is abstracted into <br>
+    multiple cloud services</p>
+    <ul>
+        <li>Flexible</li>
+        <li>Scalable</li>
+        <li>Secure</li>
+        <li>Cost-Effective</li>
+        <li>High Configurability</li>
+    </ul>
+
+    <p>Orcle calls their service provider <HL_Y>Oracle Cloud Infrastructure or Oracle Cloud or OCI</HL_Y></p>
+
+    <h2>Advantages of cloud Computing</h2>
+
+    <ul>
+        <li>You pay only for what you consume, no up front cost</li>
+        <li>Launch workloads anywhere in the world</li>
+        <li>Thousands of customers sharing the cost</li>
+        <li>Detailed monitoring, Easy to launch and experiment</li>
+        <li>Resources are elastic, grow and shrink based on demand</li>
+        <li>With a few clicks and a few minutes entire infrastructure, launched in minutes instead of weeks or months</li>
+    </ul>
+
+    <h2>Types of cloud Computing</h2>
+        <dl>
+            <dt>
+                <HL_Y>Sass Software as a Service - For customers</HL_Y>
+                <ul>
+                    <li>A product that is run and managed by the service provider</li>
+                    <li>Don't worry about how the service is maintained</li>
+                    <li>It just works and reamins available</li>
+                </ul>
+            </dt>   
+            <dt>
+                <HL_Y>Pass Platform as a Service - For Developers</HL_Y>
+                <ul>
+                    <li>Focus on the deployment and management of your apps.</li>
+                    <li>Don't worry about, provisioning, configuring or understanding the hardware or OS.</li>
+                    <li>Examples of this would be Google App Engine whre the developer can just deploy <br>
+                        the app and does not have to worry about managing the network, OS memory etc.</li>
+                </ul>
+            </dt>
+            <dt>
+                <HL_Y>Iaas Infrastructure as a Service - For Admins</HL_Y>
+                <ul>
+                    <li>The basic building blocks for cloud IT. Provides access to networking features, <br>
+                    cimputers and data storage space. Don't worry about IT staff, data centers and hardware.</li>
+                    <li>Examples of this would be AZURE, AWS, GOOGLE CLOUD compute engine whre you have access <br>
+                        to the OS and are able to configure it the way that you want.</li>
+                </ul>
+            </dt>
+        </dl>
+
+    <h2>Cloud Deployment Models</h2>
+        <ul>
+            <li><HL_Y>Cloud-Native:</HL_Y> Everything built on the cloud</li>
+            <li><HL_Y>Hybrid-Architecture:</HL_Y> Using both On Premise and the Cloud meaning your Data <br>
+                center Communicates with the cloud.</li>
+            <li><HL_Y>Cross-Cloud:</HL_Y> Using multiple cloud providers aka multi-cloud, hybrid-cloud</li>
+        </ul>
+
+    <h2>Cloud Architecture Terminologies</h2>
+        <dl>
+            <dt>
+                <HL_Y>Availability: </HL_Y> The ability for a service(web application) remains available
+                
+                <ul>
+                    <li>If a service has a high Availability we would call it <HL_Y>Highly Available</HL_Y></li>
+                    <li><HL_Y>Scalability</HL_Y> - the ability to grow rapidily or unimpeded</li>
+                    <li><HL_Y>Elasticity </HL_Y> - The ability to shrink and grow to meet the demand</li>
+                    <li><HL_Y>Fault Tolerance </HL_Y> - The ability to prevent a failure</li>
+                    <li><HL_Y>Disaster recovery </HL_Y> - The ability to recover from a failure <HL_Y>Highly Durable(DR)</HL_Y></li>
+                </ul>
+            </dt>
+            <dt><br>
+                <HL_Y>High Availability</HL_Y> 
+                Your ability for your service to remain available by ensuring there <br>
+                is <HL_CFBlue>no single point of failure</HL_CFBlue> and/or ensure a certain level of performance.
+                    <ul>
+                        <li>
+                            <HL_HPink>Example 1:</HL_HPink> 
+                            Run server in more than one data center just in case if of <br>
+                            of the servers fail than you can direct traffic to one of the other servers.
+                        </li>
+                        <li>
+                            <HL_HPink>Example 2:</HL_HPink>
+                            Running your workload across multiple <HL_CFBlue>Availability Domains</HL_CFBlue><br>
+                            ensures that if 1 or 2 <HL_CFBlue>ADs</HL_CFBlue> becomes unavailable your service/applications remains <br>
+                            available in one of the other services.
+                        </li>
+                        <li>Usually there are 3 ADs available</li>
+                        <li>
+                            <HL_Y>Oracle Load Balancer:</HL_Y> A load balancer allows you to evenly distribute traffic to multiple <br>
+                            servers in one or multiple datacenters. If a datacenter or server becomes unavailable (unhealthy) the <br>
+                            balancer would route the traffic to only healthy datacenters and servers.
+                        </li>
+                    </ul>
+            </dt><br>
+            <dt>
+                <HL_Y>High Scalability:</HL_Y> Your ability to increase your capacity based on the increasing demand <br>
+                of traffic, memory and computing power
+                    <ul>
+                        <li>
+                            <HL_CFBlue>Vertical Scaling:</HL_CFBlue> Scaling Up meaning to upgrade to a bigger server
+                        </li>
+                        <li>
+                            <HL_CFBlue>Horizontal Scaling:</HL_CFBlue> Scaling out Add more servers of the same Specialiezed
+                        </li>
+                    </ul>
+            </dt><br>
+            <dt>
+                <HL_Y>High Elasticity:</HL_Y> Your ability to Automatically increase or decrease your capacity based on <br>
+                the current demand of traffic, memory and computing power.
+                    <ul>
+                        <li>
+                            <HL_CFBlue>HE</HL_CFBlue> uses Horizontal Scaling to:
+                                <ul>
+                                    <li>
+                                        <HL_HPink>Scale out:</HL_HPink> Add more servers of the same size
+                                    </li>
+                                    <li>
+                                        <HL_HPink>Scale in:</HL_HPink> Remove more servers of the same size
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <HL_CFBlue>Vertical Scaling</HL_CFBlue> is generally hard for traditional architecture so you'll <br>
+                            usually only see horizontal scaling described with Elasticity
+                        </li>
+                        <li>
+                            <HL_Y>Autoscaling Configuration:</HL_Y> In OCI you can configure scaling rules for your instances with <br>
+                            Oracle Autoscaling configuration.
+                        </li>
+                    </ul>
+            </dt><br>
+            <dt>
+                <HL_Y>Fault Tolerant:</HL_Y> Your ability for your service to ensure there is <HL_CFBlue>no single point of failure.</HL_CFBlue> <br>
+                Preventing the chance of failure.
+                <dd>
+                    A common example is having a copy (slave) of your database where all ongoing changes are synced. <br>
+                    The Slave is not in-use until a fail over occurs and it becomes the primary database.
+                </dd>
+            </dt><br>
+            <dt>
+                <HL_Y>High Durability:</HL_Y> Your ability to recover from a disaster and to prevent the loss of data. Solutions <br>
+                that recover from a disaster is known as <HL_CFBlue>Disaster Recovery(DR)</HL_CFBlue>
+                    <ul>
+                        <li>Questions you should be asking are the following:
+                            <ul>
+                                <li>Do you have a backup?</li>
+                                <li>How fast can you restore that backup</li>
+                                <li>Does your backup still work?</li>
+                                <li>How do you ensure current live data is not corrupt?</li>
+                            </ul>
+                        </li>
+                    </ul>
+            </dt><br>
+            <dt>
+                <HL_Y>Total Cost of Ownership(TCO)</HL_Y>
+                    <ul>
+                        <li>CAPEX: Capital Expenditure
+                            <ul>
+                                <li>Buildings</li>
+                                <li>Vehicles</li>
+                                <li>Hardware</li>
+                                <li>Equipment</li>
+                                <li>Land</li>
+                            </ul>
+                        </li>
+                        <li>OPEX: Operational Expenditure
+                            <ul>
+                                <li>Products</li>
+                                <li>Business</li>
+                                <li>Systems</li>
+                            </ul>
+                        </li>
+                    </ul>
+            </dt><br>
+            <dt>
+                <HL_Y>The evolution of Computing - Dedicated</HL_Y>
+                    <ul>
+                        <li>
+                            Bare metal Machines <HL_CFBlue>* Dedicated</HL_CFBlue>
+                                <ul>
+                                    <li>A physical server wholly utilized by a single customer</li>
+                                    <li>You have to guess your capacity, you'll overpay for and underutilized server.</li>
+                                    <li>You are limited by your Operating System</li>
+                                    <li>Multiple apps can result in conflicts in resource sharing</li>
+                                    <li>You have a <HL_CFBlue>*guarantee of security, privacy and full utility of underlying resources</HL_CFBlue></li>
+                                </ul>
+                        </li>
+                        <li>
+                            VMs
+                                <ul>
+                                    <li>You can run multiple Virtual Machines on one machine</li>
+                                    <li>Hypervisor is the software layer that lets you use the VMs</li>
+                                    <li>A physical server shared by multiple customers</li>
+                                    <li>You are paying for a fraction of the server</li>
+                                    <li>You'll overpay for and underutilized Virtual Machine</li>
+                                    <li>You are limited by your Guest Operating System</li>
+                                    <li>Multiple apps on a single Virtual Machine can result in conflicts in resource sharing</li>
+                                </ul>
+                        </li>
+                        <li>
+                            Containers
+                            <ul>
+                                <li>Virtual Machine running multiple containers</li>
+                                <li>Docker Deamon is the name of the software layer that lets you run multple containers</li>
+                                <li>You can maximize the utility of the server, utilize the available capacity which is more cost efferctive</li>
+                                <li>Your containers share the same underlying OS so containers are more efficient that multiple VMs</li>
+                                <li>Multiple apps can run side by side without being limited to the same OS requirements and will not cause conflicts during resource sharing</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Functions
+                                <ul>
+                                    <li>A managed VMs running managed containers</li>
+                                    <li>Known as <HL_Y>Serverless Compute</HL_Y></li>
+                                    <li>You upload a piece of code, choose the amount of memory and duration</li>
+                                    <li>Only responsible for code and data, nothing else</li>
+                                    <li>Very Cost-Effective, only pay for the time code is running, VMs only run when there is code to be executed</li>
+                                    <li>
+                                        Cold Startss is a side-effect of this setup -- meaning that there is a startup before running the code<br>
+                                        <HL_HPink>Example:</HL_HPink> like pressing the button to run the code editors like visual studio
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+            </dt><br>
+        </dl>
+    <h2>OCI Global Infrastructure</h2>
+        <dl>
+            <dt>
+                <HL_Y>Regions:</HL_Y> is a geographically distinct location that has many datacenters(Availability Domains) or Localized geographical area
+                <ul>
+                    <li>
+                        OCI has <HL_CFBlue>21 regions</HL_CFBlue> and are planning to have 15 more
+                    </li>
+                    <li>
+                        There are 3 kinds of Regions
+                            <ul>
+                                <li>Commercial: Any customer can launch resources in these regions</li>
+                                <li>Government: Only Governments can launch resources in these regions</li>
+                                <li>Azure Connected Some commercial regions are connected to Azure</li>
+                            </ul>
+                    </li>
+            </dt><br>
+            <dt>
+                <HL_Y>Availability Domains (ADs)</HL_Y>  
+                    <ul>
+                        <li>
+                            <HL_CFBlue>An Availability Domain(AD) is what OCI calls a datacenter</HL_CFBlue>
+                        </li>
+                        <li>A datacenter is a secured building that contains hundreds of thousands of computers</li>
+                        <li>A region will generally contain 3 datacenters</li>
+                        <li>
+                            Datacenters within a region will be isolate from each other (so different buildings). But they will be close enough<br>
+                            to provide low-latency
+                        </li>
+                        <li>
+                            Its common practice to run workloads in at least 3 Ads to ensure services remain available in case one or two <br>
+                            datacenters fail. (High Availability)
+                        </li>
+                        <li>
+                            Not all OCI regions have 3 ADs on OCI. Its common strategy for cloud providers to initially launch a new region with<br>
+                            a single datacenter and add more later. (1-5 years)
+                        </li>
+                    </ul>
+            </dt><br>
+            <dt>
+                <HL_Y>Fault Domains(FDs)</HL_Y>
+                <ul>
+                    <li>A fault domain is what OCI calls a logical datacenter</li>
+                    <li>A logical datacenter is like a virtual/abstract datacenter within a physical datacenter</li>
+                    <li>
+                        An availability Domain (physical datacenters) contains resources such as infrastructure and hardware and some of those<br>
+                        resources are logically grouped together and made accessible to you within the Oracle Console.
+                    </li>
+                    <li>
+                        Having an abstraction on top of a physical datacenters allows the cloud provider to layer in between logical security<br>
+                        controls and monitoring tools and <HL_Y>fault tolerance</HL_Y>
+                    </li>
+                    <li>
+                        <HL_Y>Fault is in the name for a reason</HL_Y>
+                    </li>
+                    <li>
+                        <HL_HPink>A fault domain's primary purpose is to isolate groupings of hardware within a datacenter so they<br>
+                        don't share a single point or failure</HL_HPink>
+                    </li>
+                </ul>
+            </dt>
+        </dl>
+    
+    <h2>OCI Concepts</h2>
+
+        <dl>
+            <dt>
+                <HL_Y>Console</HL_Y>
+            </dt>
+            <dd>
+                The console is the simple and intuitive web-based user interface you can use to access and manage Oracle Cloud Infrastructure.
+            </dd><br>
+            <dt>
+                <HL_Y>Tenancy</HL_Y>
+            </dt>
+            <dd>
+                <HL_CFBlue>It’s a secure and isolated partition within OCI where you can create, organize, and administer your cloud resources</HL_CFBlue>
+            </dd><br>
+            <dt>
+                <HL_Y>Compartments</HL_Y>
+            </dt>
+            <dd>
+                It’s a logical collection of related resources that can be accessed only by certain groups that have been given permission by and administrator.<br>
+                A resource would be the cloud services provided by OCI eg. Instance, VCNs and Block Volumes
+            </dd><br>
+            <dt>
+                <HL_Y>Root Compartment</HL_Y>
+            </dt>
+                <dd>
+                    Oracle creates you a tenancy on signup and that is also known as your root compartment that holds all of your cloud resources.
+                        <ul>
+                            <li>You can nest compartments six levels deep</li>
+                            <li>You can add or delete components whenever</li>
+                            <li>Compartments are not region specific so you can group resources across region.</li>
+                            <li>Resources can be easily moved to other compartments</li>
+                            <li>Compartment resources can interact with each other</li>
+                            <li>You can apply Polices to Compartment to determine user access</li>
+                            <li>You can associate a compartment to a budget for cost analysis</li>
+                        </ul>
+                </dd><br>
+            <dt>
+                <HL_Y>Oracle Cloud IDS (OCIDs</HL_Y>
+            </dt>
+            <dd>
+                Is a unique ID assigned by oracle to your cloud resources. OCIDs are used in Policies and OCI API to reference specific cloud resources.
+                <ul>
+                    <li>Format of OCIDs: Ocid1.&ltResource Type>.&ltRealm>.[Region].[Future use].&ltunique id></li>
+                    <li>Tenancy Example: Ocid.tenancy.oc1..aaaaaaaaaaba</li>
+                    <li>Instance Example: Ocid1.instance.oc1.phx.abuw</li>
+                </ul>
+            </dd>
+            <dt>
+                <HL_Y>Programmatic Access (API, CLI, SDK, and Cloud Shell)</HL_Y>
+                <dd>
+                    <ul>
+                        <li>
+                            <HL_CFBlue>Application Programming Interface</HL_CFBlue> is a way to interact with cloud services programmatically
+                        </li>
+                        <li>
+                            <HL_CFBlue>Command Line Interface (CLI)</HL_CFBlue> Access the API via the Shell Terminal Program
+                        </li>
+                        <li>
+                            <HL_CFBlue> Cloud Shell</HL_CFBlue> a web browser-based  terminal accessible from the Oracle Cloud Console. Cloud Shell is free to use <br>
+                            (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI
+                        </li>
+                        <li>
+                            <HL_CFBlue>Software Development Kit(SDK)</HL_CFBlue> is a set of programming libraries available in common languages to interact with Oracle Cloud Services
+                            <ul>
+                                <li>
+                                    You can gain programmatic access to OCI API by uploading your private/public key.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </dd>
+            </dt>
+        </dl>
+    
+    <h2>Core Services</h2>
+    <h3>Computing Services</h3>
+    <dl>
+        <dt>
+            <HL_Y>Virtual Machines</HL_Y>
+        </dt>
+        <dd>
+            A multi-tenant server running a <boldR>Hypervisor layer</boldR>. Choose your OS Virtual Image and launch your server. You share the cost with other<br>
+            customers so you save money.
+        </dd><br>
+        <dt>
+            <HL_Y>Container Engines</HL_Y>
+            <dd>
+                Docker as a Service. Allows you to run docker containers on a virtual machine.
+            </dd>
+        </dt><br>
+        <dt>
+            <HL_Y>Functions</HL_Y>
+        </dt>
+        <dd>
+            <boldR>Serverless compute</boldR> You just upload your code, and the cloud provider takes care of the res. Code is designed to run for a short period of time <br>
+                    and you choose a managed container with a runtime.
+        </dd><br>
+        <dt>
+            <HL_Y>Dedicated Virtual Hosts</HL_Y>
+        </dt>
+        <dd>
+            A single-tenant server that is running a hypervisor layer where you can run multiple Virtual Machines. You don't share the server with anyone else, so greater security<br>
+            and performance are guaranteed
+        </dd><br>
+        <dt>
+            <HL_Y>Bare metal</HL_Y>
+        </dt>
+        <dd>
+            A dedicated server <HL_CFBlue>that has no hypervisor layer.</HL_CFBlue> Bare metal allows you to provide your applications with direct access to the proessor and memory resources of the underlying server.<br>
+            This is suited for specialized workloads where hypervisor would hinder performance. 
+        </dd><br>
+        <dt>
+            <HL_Y>Level of control from Customer Responsibility to OCI Responsibility</HL_Y>
+        </dt>
+        <dd>
+            <img src="Customer-OCI-Responsibility.png">
+        </dd>
+    </dl>
+    
+    <h3>Storage Services</h3>
+    <dl>
+        <dt>
+            <HL_Y>Block Volume</HL_Y>
+        </dt>
+        <dd>
+            Think of it like having a local virtual drive where you can choose HDD of SSD.
+            <HL_CFBlue>Data is split into evenly split blocks, directly accessed by the Operating System. Supports only a single write volumne.</HL_CFBlue>
+        </dd><br>
+        <dt>
+            <HL_Y>Local NVME</HL_Y>
+        </dt>
+        <dd>
+            Non-Volatile-Memory-Express is a Transfer Protocol for SSD that allows the dirve to operate very efficiently
+        </dd><br>
+        <dt>
+            <HL_Y>File Storage</HL_Y>
+        </dt>
+        <dd>
+            Uses a files system NSFv3 allowing multiple connections to the same storage device at the same time.
+            <ul>
+                <li><HL_CFBlue>File is stored with data and metadata</HL_CFBlue></li>
+                <li><HL_CFBlue>Multiple connections via a network share</HL_CFBlue></li>
+                <li><HL_CFBlue>Supports multiple reads, writing locks the file</HL_CFBlue></li>
+            </ul>
+        </dd><br>
+        <dt>
+            <HL_Y>Object Storage</HL_Y>
+        </dt>
+        <dd>
+            Serverless storage. Uplaod as many files as you like, scales without worrying about running out of space or data loss
+            <ul>
+                <li><HL_CFBlue>Object is stored with data, metadata and Unique ID.</HL_CFBlue></li>
+                <li><HL_CFBlue>Scales with limited, no file or storage limit</HL_CFBlue></li>
+            </ul>
+        </dd><br>
+        <dt>
+            <HL_Y>Archive Storage</HL_Y>
+        </dt>
+        <dd>
+            Long-term cold storage. Files you need to keep aroud for years that you infrequently need to access at a fraction of the storage cost.
+        </dd><br>
+    </dl>
+    <h3>Networking Services</h3>
+        <ul>
+            <li>Region: the geographical location of your network</li>
+            <li>ADs the datacenter of your AWS resources</li>
+            <li>FDs a logical grouping of resources in your datacenter</li>
+            <li>VCN(<HL_Y>Virtual Cloud Network</HL_Y>) a logically isolated section fo the OCI Cloud where you can launch OCI resources</li>
+            <li>Internet Gateway Enable access to the internet</li>
+            <li>Subnets a logical parition of an IP network into multiple smaller network segments</li>
+            <li>Virtual Firewall Options
+                <ul>
+                    <li>Security Rules</li>
+                    <li>Network Security Groups (NSGs)</li>
+                    <li>Security Lists</li>
+                    
+                </ul>
+                <img src="Virtual Firewall Options.png">
+            </li>
+            <li>Services Gateways: A secure tunnel that keeps traffic within the OCI Network</li>
+            <li>NAT Gateway: Let resources in a private subnet reach the internet</li>
+            <li>IPSec VPN: A secure connection to your on-perm to Oracle Cloud</li>
+            <li>Fast Connect: A dedicated secure connection to your on-perm to Oracle Cloud</li>
+            <li>Dynamic Routing Gateway: A virtual router that provides a path for private traffic between your VCN and outside network</li>
+            <li>
+                VCN Peering: Create a network connection between VCNs
+                <br><img src="VCN Network.png">
+            </li>
+        </ul>
+    <h3>Virtual Cloud Networks and Subnets</h3>
+        <ul>
+            <li>Virtual Cloud Network(VCNs) a logically isolated section of the OCI Cloud where you can launch OCI Resources. You can choose a <boldR>range of Ips using CIDR Range</boldR></li>
+            <li>CIDR Range of 10.0.0.0/16=65536 IP Addresses</li>
+            <li>
+                Subnets: a logical partition of an IP network into multiple smaller network segments. You are breaking up your IP range for VCNs into smaller networks.
+                    <ul>
+                        <li><boldR>Subnets need to have a smaller CIDR range than the VCNs</boldR> represent their portion. Subnet CIDR Range 10.0.0.0/24 = 256 IP Addresses</li>
+                        <li>A public subnet is one that can reach the internet</li>
+                        <li>A private subnet is one that cannot reach the internet</li>
+                    </ul>
+            </li>
+        </ul>
+    <h3>Virtual Network Interface Cards (VNICs)</h3>
+        <ul>
+            <li>Virtual Network Interface Cards (VCINs) enables an instance to connect to a VCN and determines how the instance connects with endpoints inside and outside the VCN.</li>
+            <li>Without VCIN your Instance (server) would not be able to communicate with the Internet or other network cloud services.</li>
+        </ul>
+    <h2>Virtual Network Interface Cards(VNICs)</h1> 
+        <p1>
+                Enables an instance to connect to VCN and determines how <br>
+                the instance connects with endpoints inside and <br>
+                outside the VCN <br>
+        </p1>
+
+        <p1>
+            Without VCIN your Instance server would not be able to <br>
+            communicate with the Internet or other network cloud <br>
+            services.
+        </p1>
+
+    <h2>Virtual Firewall Options (SLs and NSGs)</h2>
+
+        <p1>The networking service offers two virtual firewall features<br>
+            that both uses security rules to control traffic at the <br>
+            packet level. The two features are:
+        </p1>
+
+        <dl>
+            <dt><b>Security Lists(SLs)</b></dt>
+                <dd>The original virtual firewall feature from the Networking service.<br>
+                    Security Lists are associated with subnets and the security rules<br>
+                    apply to VCINs in those subnets<br>
+                </dd>
+                
+
+            <dt><b>Network Security Groups(NSGs)</b></dt>
+                <dd>
+                    The new virtual firewall feature designed for application components<br>
+                    that have different security postures. NSGs are supported only for specific<br>
+                    services. NSGs are directyly associated with VCINs regardless of what subnet <br>
+                    they are in.<br>
+                </dd>
+        </dl>   
+
+    <h2>Database Services</h2>
+        <dl>
+            <dt>
+                <b>
+                    VM DB Systems <br>
+                    <HL_Y>Fast Provisioning</HL_Y>
+                </b>
+            </dt>
+                <dd>
+                    - A Virtual Machine running a managed Oracle DataBase Instance Uses <boldR>Block Storage</boldR>
+                </dd>
+            <dt>
+                <b>
+                    VM BM Systems <br>
+                    <HL_Y>Fast Performance</HL_Y>
+                </b>
+            </dt>
+                <dd>
+                    A Bare Metal machine running a managed Oracle Database Instance <boldR>Uses Fast Local Storage</boldR>
+                </dd>
+
+            <dt>
+                <b>
+                    Oracle RAC <br>
+                    <HL_Y>Highly Available</HL_Y>
+                </b>
+            </dt>
+                <dd>
+                    Oracle Databases <boldR>running as a cluster</boldR>. Shares the same disk but different <br>
+                    instances running on different nodes. If a node fails, connection fails over <br>
+                    to another node.
+                </dd>
+            <dt>
+                <b>
+                    Exadata DB Systems<br>
+                    <HL_Y>Specialiezed Infrastructure</HL_Y>
+                </b>
+            </dt>
+                <dd>
+                    Exadata is a pre-configured combination of hardware and software <br>
+                    that provides an infrastructure for running Oracle Database
+                </dd>
+            <dt>
+                <b>
+                    Autonomous <br>
+                    -Shared/Dedicated<br>
+                    <HL_Y>Fully Managed</HL_Y>
+                </b>
+            </dt>
+                <dd>
+                    Automatically patches, upgrades and self-healing bad data.<br>
+                    Highly Available by defualt. Secure by default.
+                </dd>
+        </dl>
+
+    <h2>DB Systems Database Options</h2>
+        <dl>
+            <dt>
+                <b>Oracle DB Systems.</b>
+            </dt>
+                <dd>
+                    You choose your <boldR>Availability Domain</boldR> and <boldR>Shape Type</boldR><br>
+                    <img src="Oracle_DB_System.PNG">
+                </dd>
+            <dt>
+                <b>MySQL DB Systems</b>
+            </dt>
+                <dd>
+                    You Choose <boldR>Availability Domain, Fault Domain,</boldR>  and <boldR>Shape Type</boldR><br>
+                    <img src="MySQL_DB_System.PNG">
+                </dd>
+        </dl>
+    <h2>Autonomous Database Options</h2>
+        <dl>
+            <dd>
+                <div class = images>
+                    <boldR>OLAP(Reporting Analytics, Large and Infrequent Queries)</boldR>
+                    <img src="Data Warehouse.PNG">
+                </div><br>
+            </dd>
+            <dd>
+                <div class = images>
+                    <boldR>OLTP(General Purpose, Small and Frequently Queries)</boldR>
+                    <img src="Transaction Processing.PNG">
+                </div><br>
+            </dd>
+            <dd>
+                <div class = images>
+                    <p><boldR>Multi-Tenant, Shared Cost with many customers</boldR></p>
+                    <img src="Shared Infrastructure.PNG">
+                </div><br>
+            </dd>
+            <dd>
+                <div class = "images">
+                    <p><boldR>Single Tenant, A server only used by you</boldR></p>
+                    <img src = "Dedicated Infrastructure.PNG">
+                </div><br>
+            </dd>
+        </dl>
+    <h2>Oracle NOSQL</h2>
+        <p>Oracle NoSQL Database is a key/value store</p>
+        <ul>
+            <li>Produce and consume data ata high volume and velocity</li>
+            <li>Require instantaneous response time to match user expectations</li>
+            <li>Developed iwth continuously evolving data models</li>
+            <li>Scale on-demand based on the dynamic workloads</li>
+        </ul>
+    <h2>Cloud Native Services</h2>
+        <dl>
+            <dt>
+                <b>Oracle API Gateway</b>
+            </dt>
+            <dd>
+                A comprehensive platform for managing, delivering, and securing <HL_Y>Web APIs</HL_Y>
+            </dd>
+            <dt>
+                <b>Oracle Streaming</b>
+            </dt>
+            <dd>
+               Ingest and store continuous, high-volume data streams and process them in <HL_Y>real-time.</HL_Y>
+            </dd>
+            <dt>
+                <b>Oracle Kubernetes Container Engine (OKE)</b>
+            </dt>
+            <dd>
+                A managed service to run a <HL_Y>Kubernetes</HL_Y> Cluster
+            </dd>
+            <dt>
+                <b>Oracle Registry(OCIR)</b>
+            </dt>
+            <dd>A <HL_Y>repository for your docker</HL_Y> containers</dd>
+            <dt>
+                <b>Oracle Notifications</b>
+            </dt>
+            <dd>
+                A fully managed <HL_Y>publish-subscribe service</HL_Y> for reliable and scalable message delivery.
+            </dd>
+            <dt>
+                <b>Oracle Integrations</b>
+            </dt>
+            <dd>
+                <HL_Y>A service to connect on-premise, third party to your OCI</HL_Y> with premade<br>
+                adapters for easy application integration. Think of it like Zapier.
+            </dd>
+        </dl>
+    <h2>Pricing Models</h2>
+        <p>Oracle has ways for you to save with their Universal Credit Pricing. Also known as <br>
+        <HL_Y>Oracle UC</HL_Y></p>
+
+        <b>On-Demand</b>
+        <b>Pay as you go <boldR>(PAYG)</boldR></b>
+        <ul>
+            <li>No upfront commitment</li>
+            <li>Billed based on hourly consumption</li>
+            <li>Pay at the end of the month</li>
+        </ul>
+
+        <b>Monthly Flex</b>
+        <ul>
+            <li>Minimum of 12 month commitment</li>
+            <li>Minimum of $1000 per month</li>
+            <li>Saving 30%-65%</li>
+        </ul>
+        <b>Bring your own License (BYOL)</b>
+        <ul>
+            <li>Bring your on-premises license entitlement and get license <br>
+                support via their existing on-premise support contract
+            </li>
+        </ul>
+    <h3>All regions have the <boldR>same pricing</boldR></h3>
+
+    <h2>Cost Explorer</h2>
+    <h3>Cost Estimator</h3>
+    <p>This lets you see the total cost of all the services and resources that you are using this means calculating cost on Object Storate, Netowrking etc</p>
+
+    <h3> Data Transfer Costs</h2>
+        <dl>
+            <dt>
+                Data Transfer
+            </dt>
+            <dd>
+                <ul>
+                    <li>(Ingress) Data-in is Frequently</li>
+                    <li>(egress) Data-out costs money</li>
+                    <li>Data transfer within the same Availability Domain is free</li>
+                    <li>Data transfer between Availability Domain's in the same region is free</li>
+                    <li>Data transfer between Regions will result in a charge for data leaving the region</li>
+                </ul>
+                <img src="Data Transfer.PNG">
+            </dd>
+        </dl>
+    <h3>Block Volume Pricing</h3>
+        <dl>
+            <dt>
+                The are 2 things you need to consider with Block Volume Pricing
+            </dt>
+            <dt>
+                Storage Cost: GB Storage Capacity /Month $0.0255 <br>
+                and <br>
+                Performance Cost: Performance Units Per GB/Month
+
+                <ul>
+                    <li>0 VPUS at $0 for Lower cost</li>
+                    <li>10 VPUs at $0.017 for Balanced</li>
+                    <li>20 VPUs at $0.034 for Higher Performance</li>
+                </ul>
+                <boldR>Volume Performance Units (VPUs)</boldR>
+            </dt>
+        </dl>
+    <h3>Resource Tags</h3>
+    <p>
+        You can <HL_Y>tag resources</HL_Y> such as Compute, Storage and Databases. Tagging allows us to <boldR>filter resources</boldR> and <HL_Y>can be used in Cost Analysis</HL_Y><br>
+        to quickly determine costs.
+    </p>
+
+    <h3>Cost Analysis</h3>
+    <p>OCI Cost Analysis will help you visualize your ongoing costs</p>
+    <ul>
+        <li>You can filter based on <HL_Y>Compartments, Tagged Resources and Start and End date</HL_Y></li>
+        <li>You can keep track of your Free_Tier Credits</li>
+        <li>Breakdown of service costs</li>
+    </ul>
+
+
+</body>
+</html>
+
+
+
