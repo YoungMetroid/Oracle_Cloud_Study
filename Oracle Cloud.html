@@ -219,7 +219,8 @@
                                 <li>Docker Deamon is the name of the software layer that lets you run multple containers</li>
                                 <li>You can maximize the utility of the server, utilize the available capacity which is more cost efferctive</li>
                                 <li>Your containers share the same underlying OS so containers are more efficient that multiple VMs</li>
-                                <li>Multiple apps can run side by side without being limited to the same OS requirements and will not cause conflicts during resource sharing</li>
+                                <li>Multiple apps can run side by side without being limited to the same OS requirements and will not cause 
+                                    conflicts during resource sharing</li>
                             </ul>
                         </li>
                         <li>
@@ -242,7 +243,8 @@
     <h2>OCI Global Infrastructure</h2>
         <dl>
             <dt>
-                <HL_Y>Regions:</HL_Y> is a geographically distinct location that has many datacenters(Availability Domains) or Localized geographical area
+                <HL_Y>Regions:</HL_Y> is a geographically distinct location that has many datacenters(Availability Domains) or Localized 
+                geographical area
                 <ul>
                     <li>
                         OCI has <HL_CFBlue>21 regions</HL_CFBlue> and are planning to have 15 more
@@ -321,7 +323,8 @@
                 <HL_Y>Compartments</HL_Y>
             </dt>
             <dd>
-                It’s a logical collection of related resources that can be accessed only by certain groups that have been given permission by and administrator.<br>
+                It’s a logical collection of related resources that can be accessed only by certain groups that have been given permission 
+                by and administrator.<br>
                 A resource would be the cloud services provided by OCI eg. Instance, VCNs and Block Volumes
             </dd><br>
             <dt>
@@ -361,11 +364,14 @@
                             <HL_CFBlue>Command Line Interface (CLI)</HL_CFBlue> Access the API via the Shell Terminal Program
                         </li>
                         <li>
-                            <HL_CFBlue> Cloud Shell</HL_CFBlue> a web browser-based  terminal accessible from the Oracle Cloud Console. Cloud Shell is free to use <br>
-                            (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI
+                            <HL_CFBlue> Cloud Shell</HL_CFBlue> a web browser-based  terminal accessible from the Oracle Cloud Console. Cloud Shell 
+                            is free to use <br>
+                            (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure 
+                            CLI
                         </li>
                         <li>
-                            <HL_CFBlue>Software Development Kit(SDK)</HL_CFBlue> is a set of programming libraries available in common languages to interact with Oracle Cloud Services
+                            <HL_CFBlue>Software Development Kit(SDK)</HL_CFBlue> is a set of programming libraries available in common languages 
+                            to interact with Oracle Cloud Services
                             <ul>
                                 <li>
                                     You can gain programmatic access to OCI API by uploading your private/public key.
@@ -384,7 +390,8 @@
             <HL_Y>Virtual Machines</HL_Y>
         </dt>
         <dd>
-            A multi-tenant server running a <boldR>Hypervisor layer</boldR>. Choose your OS Virtual Image and launch your server. You share the cost with other<br>
+            A multi-tenant server running a <boldR>Hypervisor layer</boldR>. Choose your OS Virtual Image and launch your server. You share the 
+            cost with other<br>
             customers so you save money.
         </dd><br>
         <dt>
@@ -397,21 +404,24 @@
             <HL_Y>Functions</HL_Y>
         </dt>
         <dd>
-            <boldR>Serverless compute</boldR> You just upload your code, and the cloud provider takes care of the res. Code is designed to run for a short period of time <br>
+            <boldR>Serverless compute</boldR> You just upload your code, and the cloud provider takes care of the res. Code is designed to run for a 
+            short period of time <br>
                     and you choose a managed container with a runtime.
         </dd><br>
         <dt>
             <HL_Y>Dedicated Virtual Hosts</HL_Y>
         </dt>
         <dd>
-            A single-tenant server that is running a hypervisor layer where you can run multiple Virtual Machines. You don't share the server with anyone else, so greater security<br>
+            A single-tenant server that is running a hypervisor layer where you can run multiple Virtual Machines. You don't share the server with 
+            anyone else, so greater security<br>
             and performance are guaranteed
         </dd><br>
         <dt>
             <HL_Y>Bare metal</HL_Y>
         </dt>
         <dd>
-            A dedicated server <HL_CFBlue>that has no hypervisor layer.</HL_CFBlue> Bare metal allows you to provide your applications with direct access to the proessor and memory resources of the underlying server.<br>
+            A dedicated server <HL_CFBlue>that has no hypervisor layer.</HL_CFBlue> Bare metal allows you to provide your applications with direct 
+            access to the proessor and memory resources of the underlying server.<br>
             This is suited for specialized workloads where hypervisor would hinder performance. 
         </dd><br>
         <dt>
@@ -429,13 +439,14 @@
         </dt>
         <dd>
             Think of it like having a local virtual drive where you can choose HDD of SSD.
-            <HL_CFBlue>Data is split into evenly split blocks, directly accessed by the Operating System. Supports only a single write volumne.</HL_CFBlue>
+            <HL_CFBlue>Data is split into evenly split blocks, directly accessed by the Operating System. Supports only a single write 
+                volumne.</HL_CFBlue>
         </dd><br>
         <dt>
             <HL_Y>Local NVME</HL_Y>
         </dt>
         <dd>
-            Non-Volatile-Memory-Express is a Transfer Protocol for SSD that allows the dirve to operate very efficiently
+            Non-Volatile-Memory-Express is a Transfer Protocol for SSD that allows the drives to operate very efficiently
         </dd><br>
         <dt>
             <HL_Y>File Storage</HL_Y>
@@ -452,10 +463,11 @@
             <HL_Y>Object Storage</HL_Y>
         </dt>
         <dd>
-            Serverless storage. Uplaod as many files as you like, scales without worrying about running out of space or data loss
+            Serverless storage. Upload as many files as you like, scales without worrying about running out of space or data loss
             <ul>
                 <li><HL_CFBlue>Object is stored with data, metadata and Unique ID.</HL_CFBlue></li>
                 <li><HL_CFBlue>Scales with limited, no file or storage limit</HL_CFBlue></li>
+                <li><HL_CFBlue>Supports multiple reads and writes (no locks)</HL_CFBlue></li>
             </ul>
         </dd><br>
         <dt>
@@ -494,12 +506,15 @@
         </ul>
     <h3>Virtual Cloud Networks and Subnets</h3>
         <ul>
-            <li>Virtual Cloud Network(VCNs) a logically isolated section of the OCI Cloud where you can launch OCI Resources. You can choose a <boldR>range of Ips using CIDR Range</boldR></li>
+            <li>Virtual Cloud Network(VCNs) a logically isolated section of the OCI Cloud where you can launch OCI Resources. You can choose a 
+                <boldR>range of Ips using CIDR Range</boldR></li>
             <li>CIDR Range of 10.0.0.0/16=65536 IP Addresses</li>
             <li>
-                Subnets: a logical partition of an IP network into multiple smaller network segments. You are breaking up your IP range for VCNs into smaller networks.
+                Subnets: a logical partition of an IP network into multiple smaller network segments. You are breaking up your IP range for VCNs 
+                into smaller networks.
                     <ul>
-                        <li><boldR>Subnets need to have a smaller CIDR range than the VCNs</boldR> represent their portion. Subnet CIDR Range 10.0.0.0/24 = 256 IP Addresses</li>
+                        <li><boldR>Subnets need to have a smaller CIDR range than the VCNs</boldR> represent their portion. Subnet CIDR 
+                            Range 10.0.0.0/24 = 256 IP Addresses</li>
                         <li>A public subnet is one that can reach the internet</li>
                         <li>A private subnet is one that cannot reach the internet</li>
                     </ul>
@@ -510,18 +525,6 @@
             <li>Virtual Network Interface Cards (VCINs) enables an instance to connect to a VCN and determines how the instance connects with endpoints inside and outside the VCN.</li>
             <li>Without VCIN your Instance (server) would not be able to communicate with the Internet or other network cloud services.</li>
         </ul>
-    <h2>Virtual Network Interface Cards(VNICs)</h1> 
-        <p1>
-                Enables an instance to connect to VCN and determines how <br>
-                the instance connects with endpoints inside and <br>
-                outside the VCN <br>
-        </p1>
-
-        <p1>
-            Without VCIN your Instance server would not be able to <br>
-            communicate with the Internet or other network cloud <br>
-            services.
-        </p1>
 
     <h2>Virtual Firewall Options (SLs and NSGs)</h2>
 
@@ -649,9 +652,9 @@
     <h2>Oracle NOSQL</h2>
         <p>Oracle NoSQL Database is a key/value store</p>
         <ul>
-            <li>Produce and consume data ata high volume and velocity</li>
+            <li>Produce and consume data at a high volume and velocity</li>
             <li>Require instantaneous response time to match user expectations</li>
-            <li>Developed iwth continuously evolving data models</li>
+            <li>Developed with continuously evolving data models</li>
             <li>Scale on-demand based on the dynamic workloads</li>
         </ul>
     <h2>Cloud Native Services</h2>
@@ -720,7 +723,8 @@
 
     <h2>Cost Explorer</h2>
     <h3>Cost Estimator</h3>
-    <p>This lets you see the total cost of all the services and resources that you are using this means calculating cost on Object Storate, Netowrking etc</p>
+    <p>This lets you see the total cost of all the services and resources that you are using this means calculating cost on Object Storage, 
+        Networking etc</p>
 
     <h3> Data Transfer Costs</h2>
         <dl>
@@ -758,7 +762,8 @@
         </dl>
     <h3>Resource Tags</h3>
     <p>
-        You can <HL_Y>tag resources</HL_Y> such as Compute, Storage and Databases. Tagging allows us to <boldR>filter resources</boldR> and <HL_Y>can be used in Cost Analysis</HL_Y><br>
+        You can <HL_Y>tag resources</HL_Y> such as Compute, Storage and Databases. Tagging allows us to <boldR>filter resources</boldR> 
+        and <HL_Y>can be used in Cost Analysis</HL_Y><br>
         to quickly determine costs.
     </p>
 
@@ -827,9 +832,238 @@
             <img src="SLA_2.PNG"> 
         </dd>
         <dt>
-
         </dt>
+        <dt>
+            <HL_Y>Manageability SLAs</HL_Y>
+        </dt>
+        <dd>
+            <img src="SLA_3.PNG">
+        </dd><br>
+        <dt>
+            <HL_Y>Performance SLAs</HL_Y>
+        </dt>
+        <dd>
+            <img src="SLA_4.PNG">
+        </dd>
+        
     </dl>
+    <h3>Service Limits</h3>
+        <p>
+            When you sign up for OCI ,<HL_Y>a set of service limits is configured for your tenancy.</HL_Y> The service limit is the<br>
+            quota or allowance set on a resource.
+        </p>
+        <p>eg. your tenancy is allowed a maximum number of compute instances per AD.</p>
+        <p>
+            These limits are generally established with your Oracle sales representative when you purchase Oracle Cloud Infrastructure.<br>
+            If you signed up through the Oracle Store, default or trial limits are set for your tenancy.
+        </p>
+        <p>
+            These limits may be increased for you automatically based on your Oracle Cloud Infrastructure resource usage and account standing.<br>
+            <boldR>You can also request a service limit increase.</boldR>
+        </p>
+    <h3>Premier Support</h3>
+        <p>Oracle has a support plan called <boldR>Premier Support</boldR></p>
+        <p>
+            Rapid resolution through 24/7 access to the Oracle knowledgebase, technical support, Auto Service Request(ASR), priority service<br>
+            request handling, remote diagnostics, and two-hour onsite hardware service.
+        </p>
+        <p>Oracle has a Live Chate in the Oracle Console.</p>
+        <p>You have to talk to a sales person to get a quote. The Premier Support pricing is not clear or easily accesible.</p>
+
+    <h2>Security</h2>
+    <h3>Shared Security Model</h3>
+        <p>This tells you what OCI is repsonsible for and what the Customer is responsible for</p>
+        <dl>
+            <dt><HL_CFBlue>OCI</HL_CFBlue></dt>
+            <dd>
+                <HL_Y>Software</HL_Y>
+                <ul>
+                    <li>Compute</li>
+                    <li>Storage</li>
+                    <li>Database</li>
+                    <li>Networking</li>
+                </ul>
+                <HL_Y>Hardware / Global Infrastructure</HL_Y>
+                <ul>
+                    <li>Region</li>
+                    <li>Availability Domains</li>
+                    <li>PHysical Security</li>
+                </ul>
+            </dd><br>
+            <dt><HL_CFBlue>Customers</HL_CFBlue></dt>
+            <dd>
+                <HL_Y>Configuration of Managed Services or Third-Party Software</HL_Y>
+                <ul>
+                    <li>Platforms</li>
+                    <li>Applications</li>
+                    <li>Identity and Access Management(IAM)</li>
+                </ul>
+                <HL_Y>Configuration of Virtual Infrastructure and Systems</HL_Y>
+                <ul>
+                    <li>Operating System</li>
+                    <li>Network</li>
+                    <li>Firewall</li>
+                </ul>
+                <HL_Y>Security Configuration of Data</HL_Y>
+                <ul>
+                    <li>Client-Side Data Encryption</li>
+                    <li>Server-side Encryption</li>
+                    <li>Networking Traffic Protection</li>
+                    <li>Customer Data</li>
+                </ul>
+            </dd>
+        </dl>
+    <h3>Identity Access Management(IAM)</h3>
+        <p>Identity and Access Management(IAM) service lets you <HL_Y>control who has access</HL_Y> to your cloud resources</p>
+        <dl>
+            <dt>
+                <HL_CFBlue>Users</HL_CFBlue>
+            </dt>
+            <dd>
+                An individual employee or system that needs to manage or use your OCI resources.
+            </dd><br>
+            <dt>
+                <HL_CFBlue>Groups</HL_CFBlue>
+            </dt>
+            <dd>
+                A collection of users who all need the same type of access to a set of resources or compartment
+            </dd><br>
+            <dt>
+                <HL_CFBlue>Dynamic Groups</HL_CFBlue>
+            </dt>
+            <dd>
+                A special type of group that contains resources that match rules that you define
+            </dd><br>
+            <dt>
+                <HL_CFBlue>Polices</HL_CFBlue>
+            </dt>
+            <dd>
+                A language that defines permissions if users, groups, dynamic groups or compartments should be allowed access to <br>
+                specific OCI resources in your account.<br>
+                <boldR>You just create policies and they are in-effect. You don't assign policies at the creation of Users, Groupsor Resources</boldR>
+            </dd>
+        </dl>
+    <h3>Common Policies Examples</h3>
+        <p>Allow &lt subject > to &lt verb > &lt resource-type > in &lt location > where &lt conditions ></p>
+        <p>
+            <b>Let users analyze costs</b><br>
+            <HL_CFBlue>Allow group BudgetTeam to read usage-reports in tenacy</HL_CFBlue>
+        </p>
+        <p>
+            <b>Let database admins manage DB Systems</b><br>
+            <HL_CFBlue>Allow group Database Admins to manage database-family in tenancy</HL_CFBlue>
+        </p>
+       <p>
+           <b>Let users downlaod objects from Object Storage buckets</b>
+           <HL_CFBlue>Allow group ObjectReaders to read buckets in compartment AB</HL_CFBlue>
+       </p>
+
+    <h3> Anatomy of a Policy</h3>
+        <p><b>Allow <boldR>&lt subject ></boldR> to &lt verb > &lt resource-type > in &lt location > where &lt conditions ></b></p>
+
+        <dl>
+            <dt>
+                <b>Everything</b>
+            </dt>
+            <dd>
+                <ul>
+                    <li><boldR>any-user</boldR></li>
+                </ul>
+            </dd><br>
+            <dt>
+                <b>By IAM Group Name of OCID</b>
+            </dt>
+            <dd>
+                <ul>
+                    <li><boldR>group Developers</boldR></li>
+                    <li><boldR>group id ocid.group.oc1...</boldR></li>
+                </ul>
+            </dd><br>
+            <dt>
+                <b>By Dynamic Group Name of OCID</b>
+            </dt>
+            <dd>
+                <ul>
+                    <li><boldR>dynamic-group taggedProd</boldR></li>
+                    <li><boldR>dynamic-group id ocid1.group.oc1...</boldR></li>
+                    </ul>
+            </dd>
+        </dl>
+        <p>
+            <b>Allow &lt subject > to <boldR>&lt verb ></boldR> &lt resource-type > in &lt location > where &lt conditions ></b><br>
+            <img src="Verbs.PNG">
+        </p>
+
+        <p> 
+            <b>Allow &lt subject > to &lt verb > <boldR>&lt resource-type ></boldR> in &lt location > where &lt conditions ></b><br>
+            <dl>
+                <dt>Everything!</dt>
+                <dd>
+                    <boldR>all-resources</boldR>
+                </dd><br>
+                <dt>Individual Types</dt>
+                <dd>
+                    <ul>
+                        <li><boldR>buckets</boldR></li>
+                        <li><boldR>db-nodes</boldR></li>
+                        <li><boldR>route-tables</boldR></li>
+                        <li><boldR>mount-tables</boldR></li>
+                    </ul>
+                </dd><br>
+                <dt>Family Types</dt>
+                <dd>
+                    <ul>
+                        <li><boldR>database-family</boldR></li>
+                        <li><boldR>instance-family</boldR></li>
+                        <li><boldR>object-family</boldR></li>
+                        <li><boldR>virtual-network-family</boldR></li>
+                        <li><boldR>cluster-family</boldR></li>
+                        <li><boldR>dns-family</boldR></li>
+                    </ul>
+                </dd>
+            </dl>
+        </p>
+        <p>
+            <b>Allow &lt subject > to &lt verb > &lt resource-type > in <boldR>&lt location ></boldR> where &lt conditions ></b><br>
+            <dl>
+                <dt>
+                    Specific Everything
+                </dt>
+                <dd>
+                    <boldR>tenancy</boldR>
+                </dd><br>
+                <dt>A single compartment by its name</dt>
+                <dd>
+                    <ul>
+                        <li><boldR>compartment Development</boldR></li>
+                        <li><boldR>compartment Production</boldR></li>
+                    </ul>
+                </dd><br>
+                <dt>A single compartment by its name</dt>
+                <dd><boldR>compartment ocid1.group.ocr...</boldR></dd>
+            </dl>
+        </p>
+        <p>
+            <b>Allow &lt subject > to &lt verb > &lt resource-type > in &lt location > where <boldR>&lt conditions ></boldR></b><br>
+            <dl>
+                <dt>Match on String</dt>
+                <dd><boldR>Where target.group.name = 'Staging'</boldR></dd><br>
+                <dt>Match on regex</dt>
+                <dd><boldR>where target.group.name = /Customer-*/</boldR></dd><br>
+                <dt>NOT</dt>
+                <dd><boldR>where target.group.name != 'Beta'</boldR></dd><br>
+                <dt>All</dt>
+                <dd><boldR>where all {target.group.name == 'Development',target.group.name != 'Production'}</boldR></dd><br>
+                <dt>Any</dt>
+                <dd><boldR>where any {target.group.name != /ProjectA-*/,target.group.name != /ProjectB-*/}</boldR></dd>
+
+            </dl>
+        </p>
+    <h3>Mult-Factor Authentication (MFA)</h3>
+    
+
+
+
 </body>
 </html>
 
