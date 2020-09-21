@@ -1060,7 +1060,181 @@
             </dl>
         </p>
     <h3>Mult-Factor Authentication (MFA)</h3>
-    
+        <dl>
+            <dt><b>What is Multi-Factor Authentication (MFA)</b></dt>
+            <dd>
+                A security control where after you fill in you username/email and password. <boldR>you have to use a second device</boldR><br>
+                such as a phone to confirm that its you logging in.<br>
+                MFA protects against people who have stolen your password.<br>
+                MFA is an option in most cloud providers and even social media websites such as Facebook.
+            </dd>
+        </dl>
+    <h3>Federation</h3>
+        <dl>
+            <dt>
+            <b>Federation Identity</b> is the ability to enable users from one domain to securely access data or systems of another<br>
+            domain without the need of a redundant user administrator.
+            </dt>
+            <dd>
+                <HL_CFBlue>Example: </HL_CFBlue>If you were a large company and you purchased multiple commercial and enterprise software products it would be convenient if when an employee <br>
+                logged in the work computer the had access to all these software products.
+            </dd><br>
+            <dt>
+                <b>Single Sign On</b>
+            </dt>
+            <dd>
+                Is the technology that enable's users to authenticate without the need to login or have separate pair credentials to<br>
+                third party systems
+            </dd><br>
+            <dt><b>An identity provider (IdP)</b></dt>
+            <dd>
+                A trusted provider of your user identity that lets you authenticate to access other services. Identity Providers could be: <br>
+                Microsoft Active Directory, Okta, Facebook, Amazon, Google, Twitter, Github, LinkedIn or .... <HL_Y>Oracle Identity Cloud Service</HL_Y>
+            </dd>
+        </dl>
+    <h3>OCI Security - Encryption</h3>
+        
+        <dl>
+            <dt>
+                <HL_Y>Encryption-At-Rest</HL_Y>
+            </dt>
+            <dd>
+                Information that is in Block Volume, File Storage or Object Storage, its already encrypted
+            </dd><br>
+            <dt>
+                <HL_Y>Encrypted-In-Transit</HL_Y>
+            </dt>
+            <dd>
+                When the data leaves the storage device, the traffic is encrypted
+            </dd><br>
+            <dt>
+                <HL_Y>Bring Your Own Keys (BYOKs)</HL_Y>
+            </dt>
+            <dd>
+                For the Encryption at rest or in transit you'll be using some type of key, you can use your own keys
+            </dd><br>
+            <dt>
+                <HL_Y>Private Buckets</HL_Y>
+            </dt>
+            <dd>
+            You can secure your buckets which are called Folders which are private buckets
+            </dd><br>
+            <dt>
+                <HL_Y>Database Service</HL_Y>
+            </dt>
+            <dd>
+                <ul>
+                    <li><b>Transparent Data Encryption (TDE)</b>: is a technology employed by Microsoft, IBM and Oracle to encrypt database files</li>
+                    <li><b>Data Safe</b>: is a security console that monitors sensitive data such as OCI databases</li>
+                    <li><b>Oracle Database Vault</b>: restricts access to specifi areas in an Oracle database from any user, including users who have administrative access</li>
+                </ul>
+                <br><br>
+                <img src='Encryption.PNG'>
+            </dd>
+        </dl>
+    <h3>At-Rest Vs In-Transit Encryption</h3>
+        <dl>
+            <dt>
+                <HL_Y>At-Rest Encyption</HL_Y>
+            </dt>
+            <dd>
+                At-Rest Encyption is <HL_Y>securing data that is not moving</HL_Y>. Encrypting a hard drive would be considered At-Rest Encryption. A key pair would<br>
+                be use to encrypt data and cryptographic alogrithm such as <b>AES 256</b> might be used.
+            </dd><br>
+            <dt>
+                <HL_Y>In-Transit Encryption</HL_Y>
+            </dt>
+            <dd>
+                In-Transit Encryption is <HL_Y>ensuring data that is moving from lcation to another is secure</HL_Y>. An In-transit Encyption protocol would be <b>SSL,<br>
+                HTTPS, TLS</b>
+            </dd>
+        </dl>
+    <h3>Data Safe</h3>
+        <p>Oracle Data Sage is a <boldR>unified control center</boldR> for your Oracle Databases</p>
+        <img src='DataSafe.PNG'>
+
+        <p>It helps you understand</p>
+        <ul>
+            <li>The sensitivity of you data</li>
+            <li>evaluate risks to data</li>
+            <li>mask sensitive data</li>
+            <li>implement and monitor security controls</li>
+            <li>assess user security</li>
+            <li>monitor user activity</li>
+            <li>address compliance requierments</li>
+        </ul>
+    <h3>Compliance Programs</h3>
+        <p>
+            Enterprise Companies <boldR>WILL NOT BUY</boldR> your software solutions unless its secure <br>
+            How are you going <boldR>to meet their security compliance requirements</boldR>?<br>
+            We'll only do busniess with you if you are...
+            <ul>
+                <li><b>NIST 800-53</b></li>
+                <li><b>PIPEDA Compliant</b></li>
+                <li><b>HIPPA Compliant</b></li>
+                <li><b>FIPS-140-2 Compliant</b></li>
+            </ul>
+            <img src='Compliance Programs.PNG'>
+        </p>
+    <h3>OCI Vault</h3>
+        <p><b>OCI Vault</b> makes it easy for you to <boldR>create, control and rotate encryption keys</boldR> used to encrypt data on OCI</p>
+        <h4>OCI Vault was previosly known as OCI Key Management</h4>
+        <p>
+            OCI Vault is a multi-tenant Cloud HSM<br>
+            An HSM is a <b>Hardware Security Module.</b> Its a piece of hardware designed to store encryption keys.
+            <HL_CFBlue>Its meets a compliance program FIPS 140-2</HL_CFBlue>
+        </p>
+    <h3>OS Management</h3>
+        <p>
+            <b>OS Managment</b> is a service that allows you to <HL_Y>manage updates and patches</HL_Y> for the Virtual Machines(VMs) Operation Systems (OS) running on OCID<br>
+            <boldR>Think of it like a toolbox for your VMs</boldR>
+        </p>
+        <dl>
+            <dt><b>The Features of OS Management</b></dt>
+            <dd>
+                <ul>
+                    <li><b>Packages</b> -- Searching, Installing or Removing Linux packages</li>
+                    <li><b>CVEs</b> -- a search facility that you can use to check individual CVEs (Common Vulnerabilities and Exposures) to determine the level of exposure in you tenancy</li>
+                    <li><b>Software Sources</b> -- add and delete softwares sources to provide packages to instances, and to track the available updates to those packages.</li>
+                    <li><b>Managed Instance Groups</b> -- enable you to group your instances together for updates</li>
+                    <li><b>Scheduled Jobs</b> -- Executes one-time a single job eg. Donwload application logs</li>
+                    <li><b>Work Requests</b> -- Executes a job based on a schedule eg. Backup these systems files every day</li>
+                    <li><b>Metrics and Alarms</b> -- Create alarms such as when its time to apply a Security Update</li>
+                </ul>
+            </dd>
+        </dl>
+    <h3>DDos Protection</h3>
+        <p>
+            <b>What is a DDos Attack</b>
+            A malicious attempt to disrupt normal traffic by flooding a website with large amounts of fake traffic.
+            <img src="DDOS.PNG">
+        </p>
+    <h3>Web Application Firewall (WAF)</h3>
+        <p>
+            <b>OCIs Web Application Firewall (WAF)</b> protects your web-applications from <HL_Y>common web exploits. (CWEs)</HL_Y><br>
+            OCI WAF will sit between your server and incoming traffic and filter out HTTP/S traffic <boldR> Layer7</boldR> it decides that its unwanted based on managed or customer configured rules.<br>
+            <img src ="WAF.PNG">
+
+            <img src="OWASP.PNG">
+            Protect web applications from attacks covered in the <boldR>OWASP Top 10</boldR> most dangerous attacks:
+            <ul>
+                <li>Injection</li>
+                <li>Broken Authentication</li>
+                <li>Sensitive data exposure</li>
+                <li>XML External Entities (XXE)</li>
+                <li>Broken Access control</li>
+                <li>Security misconfigurations</li>
+                <li>Cross Site Scripting (XSS)</li>
+                <li>Insecure Desrialization</li>
+                <li>Using Components with known vulnerabilities</li>
+                <li>Insufficient logging and monitoring</li>
+            </ul>
+
+
+
+        </p>
+
+
 
 
 
